@@ -66,6 +66,9 @@ ENV/
 # Project history
 .history/
 
+# Output directory
+output/
+
 # OS files
 .DS_Store
 Thumbs.db
