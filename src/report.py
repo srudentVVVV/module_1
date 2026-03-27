@@ -61,7 +61,7 @@ class ReportGenerator:
                        save: bool = True) -> plt.Figure:
         """Побудувати карту класів."""
         n_classes = len(target_names)
-        colors = ["#e74c3c", "#2ecc71", "#3498db", "#f39c12", "#9b59b6"][:n_classes + 1]
+        colors = ["#e74c3c", "#2ecc71", "#3498db", "#f39c12", "#9b59b6"][:n_classes]
         colors_with_empty = ["#ecf0f1"] + colors
         cmap = ListedColormap(colors_with_empty)
 

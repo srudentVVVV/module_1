@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 
@@ -34,10 +35,10 @@ class ConfigManager:
                 with open(self.config_path, "r", encoding="utf-8") as f:
                     self.config = json.load(f)
             except (json.JSONDecodeError, IOError):
-                self.config = DEFAULT_CONFIG.copy()
+                self.config = copy.deepcopy(DEFAULT_CONFIG)
                 self.save()
         else:
-            self.config = DEFAULT_CONFIG.copy()
+            self.config = copy.deepcopy(DEFAULT_CONFIG)
             self.save()
         return self.config
 
